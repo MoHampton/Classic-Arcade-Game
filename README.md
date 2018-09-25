@@ -1,8 +1,11 @@
 # Classic-Arcade-Game
-###Game Functionality
+
+### Game Functionality
+
 Your implementation must at minimum follow the basic functionality, but you can add additional optional functionality to your game, if you wish.
 
-###Basic Functionality
+### Basic Functionality
+
 In this game you have a Player and Enemies (bugs). The goal of the player is to reach the water, without colliding into any one of the enemies.
 
 * The player can move left, right, up and down
