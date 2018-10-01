@@ -1,7 +1,10 @@
 # Welcome to the Classic-Arcade-Game (Frogger Dupe)
 ![screenshot](images/classic-arcade-game.gif)
 
-:link: [Click Here To Play](https://mohampton.github.io/Classic-Arcade-Game/)
+## :page_with_curl: Game Loading Instructions
+Clone the repository and open index.html or use the link provided below
+
+## :link: [Click Here To Play](https://mohampton.github.io/Classic-Arcade-Game/)
 
 ## :video_game: How to Play 
 In this game you have a Player and Enemies (bugs). The goal of the player is to reach the water, without colliding into any one of the enemies.
