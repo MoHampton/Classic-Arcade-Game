@@ -22,7 +22,20 @@ var Engine = (function(global) {
         win = global.window,
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
-        lastTime;
+        lastTime,
+        animatedFrame;
+
+    // Game Modal (Assisted by fellow scholar)
+    const modal = document.querySelector('.modal-overlay');
+    const playAgain = document.querySelector('.modal-button');
+
+    // Play Again Button
+    playAgain.addEventListener('click', function() {
+        modal.classList.toggle('hide');
+        player.reset();
+        player.playerWin = false;
+        win.requestAnimationFrame(main);
+    });
 
     canvas.width = 505;
     canvas.height = 606;
@@ -55,7 +68,13 @@ var Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
-        win.requestAnimationFrame(main);
+       // win.requestAnimationFrame(main);
+        if (player.playerWin === true) {
+            win.cancelAnimationFrame(animatedFrame);
+            modal.classList.toggle('hide');
+        } else {
+            animatedFrame = win.requestAnimationFrame(main);
+        }       
     }
 
     /* This function does some initial setup that should only occur once,
